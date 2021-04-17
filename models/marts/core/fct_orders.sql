@@ -2,7 +2,7 @@ SELECT
     orders.order_id, 
     orders.customer_id, 
     orders.order_date, 
-    SUM( payments.amount) AS amount
+    SUM(payments.amount) AS amount
 
 FROM {{ ref ('stg_orders') }} AS orders
     LEFT JOIN {{ref ('stg_payments') }} AS payments USING (order_id)
