@@ -32,12 +32,6 @@ models:
           - relationships:
               to: ref('stg_customers')
               field: customer_id
-  - name: stg_payments
-    description: Staged payment data from our jaffle shop app.
-    columns:
-      - name: status
-        description: "{{ doc ('payment_status')}}"
-
 
 # Schema Tests:
 #  [- unique]
