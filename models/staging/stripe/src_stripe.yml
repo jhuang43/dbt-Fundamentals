@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: Stripe payment data.
+    database: dbt-tutorial
+    tables:
+      - name: payment
+        columns:
+          - name: ID
+            tests:
+              - unique
+              - not_null
