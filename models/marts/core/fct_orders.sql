@@ -1,3 +1,7 @@
+{{ config (
+    materialized = 'view'
+)}}
+
 SELECT 
     orders.order_id, 
     orders.customer_id, 
