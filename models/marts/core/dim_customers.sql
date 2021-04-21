@@ -15,7 +15,7 @@ customer_orders as (
         sum(amount) as lifetime_value
 
     from orders
-    group by 1
+    group by customer_id
 ),
 
 
